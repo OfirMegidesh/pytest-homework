@@ -1,0 +1,16 @@
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver = webdriver.Chrome(executable_path="C:\\Users\\eliav\\Downloads\\chromedriver_win32\\chromedriver.exe")
+driver.get("https://www.youtube.com/")
+search_box = driver.find_element(by=By.XPATH, value='/html/body/ytd-app/div[1]/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input')
+search_box.send_keys("tell me why brooklyn 99")
+driver.find_element(By.XPATH, '//*[@id="search-icon-legacy"]').click()
+time.sleep(2)
+driver.find_element(by=By.XPATH, value='//*[@id="video-title"]/yt-formatted-string').click()
+time.sleep(2)
+driver.find_element(by=By.XPATH, value='/html/body/ytd-app/div[1]/ytd-page-manager/ytd-watch-flexy/div[5]/div[1]/div/ytd-comments/ytd-item-section-renderer/div[1]/ytd-comments-header-renderer/div[5]/ytd-comment-simplebox-renderer/div[1]/yt-formatted-string').click()
+driver.close()
