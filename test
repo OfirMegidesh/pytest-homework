@@ -1,0 +1,44 @@
+import pytest
+from main import *
+
+def test_add2():
+    assert 7 == add(7, 8)
+
+def test_add():
+    assert 3 == add(1, 2)
+
+def test_subtract():
+    assert 6 == subtract(7, 1)
+
+def test_subtract2():
+    assert 20 == subtract(30, 0)
+
+def test_multiply():
+    assert 9 == multiply(3, 3)
+
+def test_multiply2():
+    assert 12 == multiply(10, 8)
+
+def test_divide():
+    assert 8 == divide(80, 10)
+
+def test_divide2():
+    assert 200 == divide(7, 1)
+
+def test_divide_evenlly2():
+    assert 3 == divide_evenlly(7, 9)
+
+def test_divide_evenlly():
+    assert 1 == divide_evenlly(8, 8)
+
+def test_mudolo():
+    assert 7 == mudolo(7, 10)
+
+def test_mudolo2():
+    assert 6 == mudolo(10, 7)
+
+def test_sqrt():
+    assert 4 == sqrt(16)
+
+def test_sqrt2():
+    assert 7 == sqrt(16)
